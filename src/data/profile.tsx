@@ -32,7 +32,7 @@ export const profile: Profile = {
       icon: <FontAwesomeIcon icon={faAt} />,
       label: 'Email',
       content: (
-        <Link href="mailto:fisrt.last@example.com">fisrt.last@example.com</Link>
+        <Link href="mailto:first.last@example.com">first.last@example.com</Link>
       ),
     },
     {
