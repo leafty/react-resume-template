@@ -36,8 +36,6 @@ export const HomeProfile: FunctionComponent<HomeProfileProps> = ({
 }) => {
   const byColumns = splitColumns(data.profileBits, rowCount);
 
-  console.log(byColumns);
-
   return (
     <section id="profile" className={styles.section}>
       {byColumns.map((itemsRow, col) => (

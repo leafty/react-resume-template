@@ -1,18 +1,23 @@
 import { default as cx } from 'classnames';
-import React from 'react';
+import React, {
+  ComponentPropsWithRef,
+  ElementType,
+  FunctionComponent,
+  ReactElement,
+} from 'react';
 import { ListSectionListItem } from '../item/item.component';
 import styles from './list.module.scss';
 
 export interface ListSectionListProps<
-  As extends React.ElementType = React.ElementType,
+  As extends ElementType = ElementType,
   Data = any,
-> extends React.ComponentPropsWithRef<'ol'> {
+> extends ComponentPropsWithRef<'ol'> {
   as?: As;
   data?: Data[];
-  itemFn?: (data: Data) => React.ReactElement;
+  itemFn?: (data: Data) => ReactElement;
 }
 
-export const ListSectionList: React.FunctionComponent<ListSectionListProps> = ({
+export const ListSectionList: FunctionComponent<ListSectionListProps> = ({
   as,
   data,
   itemFn,

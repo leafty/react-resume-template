@@ -1,21 +1,21 @@
-import React from 'react';
+import React, { ElementType, FunctionComponent } from 'react';
 import {
-  BaseSectionProps,
   BaseSection,
+  BaseSectionProps,
 } from '../base-section/base-section.component';
 import { BaseSectionHeading } from '../base-section/heading/heading.component';
 import { TimeSectionList, TimeSectionListProps } from './list/list.component';
 
 export interface TimeSectionProps<
   Data = any,
-  As extends React.ElementType = React.ElementType,
+  As extends ElementType = ElementType,
 > extends Omit<BaseSectionProps<As>, 'title'> {
   title?: string;
   data?: Data[];
   listProps?: Omit<TimeSectionListProps, 'data'>;
 }
 
-export const TimeSection: React.FunctionComponent<TimeSectionProps> = ({
+export const TimeSection: FunctionComponent<TimeSectionProps> = ({
   title,
   heading,
   data,

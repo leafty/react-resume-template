@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { Container as BaseContainer } from 'react-bootstrap';
 import { ContainerProps as BaseContainerProps } from 'react-bootstrap/esm/Container';
 
 export interface ContainerProps extends BaseContainerProps {}
 
-export const Container: React.FunctionComponent<ContainerProps> = ({
+export const Container: FunctionComponent<ContainerProps> = ({
   className,
   ...rest
 }) => {

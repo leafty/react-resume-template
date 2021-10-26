@@ -2,19 +2,22 @@ import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { default as cx } from 'classnames';
 import { DateTime } from 'luxon';
-import React from 'react';
+import React, {
+  ComponentPropsWithRef,
+  ElementType,
+  FunctionComponent,
+} from 'react';
 import styles from './item.module.scss';
 
-export interface TimeSectionListItemProps<
-  As extends React.ElementType = React.ElementType,
-> extends React.ComponentPropsWithRef<'li'> {
+export interface TimeSectionListItemProps<As extends ElementType = ElementType>
+  extends ComponentPropsWithRef<'li'> {
   as?: As;
   reverse?: boolean;
   start?: DateTime;
   end?: DateTime;
 }
 
-export const TimeSectionListItem: React.FunctionComponent<TimeSectionListItemProps> =
+export const TimeSectionListItem: FunctionComponent<TimeSectionListItemProps> =
   ({ as, reverse, start, end, children, className, ...rest }) => {
     const Root = as || 'li';
     const startText = start?.toFormat('LL.yyyy') || 'Present';

@@ -1,18 +1,19 @@
-import { faDotCircle } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { default as cx } from 'classnames';
-import { Moment } from 'moment';
-import React, { ReactNode } from 'react';
+import React, {
+  ComponentPropsWithRef,
+  ElementType,
+  FunctionComponent,
+  ReactNode,
+} from 'react';
 import styles from './item.module.scss';
 
-export interface ListSectionListItemProps<
-  As extends React.ElementType = React.ElementType,
-> extends React.ComponentPropsWithRef<'li'> {
+export interface ListSectionListItemProps<As extends ElementType = ElementType>
+  extends ComponentPropsWithRef<'li'> {
   as?: As;
   label?: ReactNode;
 }
 
-export const ListSectionListItem: React.FunctionComponent<ListSectionListItemProps> =
+export const ListSectionListItem: FunctionComponent<ListSectionListItemProps> =
   ({ as, label, children, className, ...rest }) => {
     const Root = as || 'li';
 

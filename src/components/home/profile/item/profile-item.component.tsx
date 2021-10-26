@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { FunctionComponent, ReactNode } from 'react';
 import styles from './profile-item.module.scss';
 
 export interface ProfileItemProps {
@@ -7,7 +7,7 @@ export interface ProfileItemProps {
   icon?: ReactNode;
 }
 
-export const ProfileItem: React.FunctionComponent<ProfileItemProps> = ({
+export const ProfileItem: FunctionComponent<ProfileItemProps> = ({
   label,
   content,
   icon,

@@ -1,15 +1,19 @@
 import { default as cx } from 'classnames';
-import React from 'react';
+import React, {
+  ComponentPropsWithRef,
+  ElementType,
+  FunctionComponent,
+  ReactNode,
+} from 'react';
 import styles from './base-section.module.scss';
 
-export interface BaseSectionProps<
-  As extends React.ElementType = React.ElementType,
-> extends React.ComponentPropsWithRef<'section'> {
+export interface BaseSectionProps<As extends ElementType = ElementType>
+  extends ComponentPropsWithRef<'section'> {
   as?: As;
-  heading?: React.ReactNode;
+  heading?: ReactNode;
 }
 
-export const BaseSection: React.FunctionComponent<BaseSectionProps> = ({
+export const BaseSection: FunctionComponent<BaseSectionProps> = ({
   as,
   heading,
   children,

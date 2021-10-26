@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ElementType, FunctionComponent } from 'react';
 import {
   BaseSection,
   BaseSectionProps,
@@ -8,14 +8,14 @@ import { ListSectionList, ListSectionListProps } from './list/list.component';
 
 export interface ListSectionProps<
   Data = any,
-  As extends React.ElementType = React.ElementType,
+  As extends ElementType = ElementType,
 > extends Omit<BaseSectionProps<As>, 'title'> {
   title?: string;
   data?: Data[];
   listProps?: Omit<ListSectionListProps, 'data'>;
 }
 
-export const ListSection: React.FunctionComponent<ListSectionProps> = ({
+export const ListSection: FunctionComponent<ListSectionProps> = ({
   title,
   heading,
   data,

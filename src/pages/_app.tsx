@@ -1,10 +1,10 @@
 import { AppProps } from 'next/app';
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import 'typeface-nunito-sans';
 import 'typeface-open-sans';
 import '../style/theme.scss';
 
-export const MyApp: React.FunctionComponent<AppProps> = ({
+export const MyApp: FunctionComponent<AppProps> = ({
   Component,
   pageProps,
 }) => <Component {...pageProps} />;
