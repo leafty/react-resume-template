@@ -10,6 +10,12 @@
 This project can be cloned and edited to create your own resume using React
 components.
 
+Use the print to PDF function from your browser to get a nice CV with
+functional hyperlinks.
+
+Here is the resulting PDF with the example profile:
+[Example PDF](https://github.com/leafty/react-resume-template/blob/main/docs/example.pdf).
+
 > Do I need to know React to use this?
 
 Most probably yes. While editing the template to replace it with your own real
