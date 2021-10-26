@@ -1,0 +1,78 @@
+@import '../../../../style/colors.scss';
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.timeline {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin-right: 1rem;
+
+  &.reverse {
+    flex-direction: column-reverse;
+  }
+
+  & .start,
+  & .end {
+    display: flex;
+    padding-right: 1rem;
+    border-right: 2px solid $color-text;
+    min-height: 2.25rem;
+    // min-height: 2rem;
+    height: 100%;
+    width: 100%;
+
+    &.present {
+      min-height: 2.25rem;
+      border-right-style: dashed;
+    }
+
+    & span {
+      width: 100%;
+    }
+  }
+
+  & .start,
+  &.reverse .end {
+    & span {
+      align-self: flex-start;
+    }
+  }
+
+  &.reverse .start,
+  & .end {
+    & span {
+      align-self: flex-end;
+    }
+  }
+
+  & .dotTop {
+    position: absolute;
+    top: -9px;
+    right: -7px;
+    z-index: 1;
+    background-color: white;
+
+    &.hide {
+      display: none;
+    }
+  }
+
+  & .dotBottom {
+    position: absolute;
+    bottom: -7px;
+    right: -7px;
+    z-index: 1;
+    background-color: white;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}

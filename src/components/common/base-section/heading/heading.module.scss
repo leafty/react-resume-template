@@ -1,0 +1,9 @@
+@import '../../../../style/colors.scss';
+@import '../../../../style/fonts.scss';
+
+.heading {
+  border-bottom: 1px solid $color-text;
+
+  @include font-h2();
+  color: $color-primary;
+}

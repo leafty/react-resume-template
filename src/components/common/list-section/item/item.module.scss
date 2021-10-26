@@ -1,0 +1,15 @@
+@import '../../../../style/colors.scss';
+
+.item {
+  display: flex;
+  flex-direction: row;
+}
+
+.label {
+  width: 102px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}

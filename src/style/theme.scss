@@ -1,0 +1,19 @@
+@import './colors.scss';
+@import './fonts.scss';
+
+html {
+  font-size: 100%;
+}
+
+body {
+  @include font-base();
+  color: $color-text !important;
+  background: $color-background !important;
+
+  a {
+    color: $color-secondary;
+    text-decoration: underline;
+  }
+}
+
+@import '~bootstrap/scss/bootstrap';

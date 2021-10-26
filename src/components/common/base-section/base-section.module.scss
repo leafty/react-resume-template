@@ -1,0 +1,5 @@
+@import '../../../style/fonts.scss';
+
+.section {
+  @include font-base();
+}

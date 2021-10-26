@@ -1,0 +1,23 @@
+@mixin font-base {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin font-heading {
+  font-family: 'Nunito Sans';
+  font-style: normal;
+  font-weight: 700;
+}
+
+@mixin font-h1 {
+  @include font-heading();
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+@mixin font-h2 {
+  @include font-heading();
+  font-size: 2rem;
+  font-weight: 700;
+}

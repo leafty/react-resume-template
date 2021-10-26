@@ -1,0 +1,19 @@
+@import '../../../../style/colors.scss';
+
+.li {
+  display: block;
+}
+
+.icon {
+  position: relative;
+  top: -1px;
+}
+
+.label {
+  color: $color-gray;
+}
+
+.text {
+  font-weight: 600;
+  margin-left: 0.5rem;
+}

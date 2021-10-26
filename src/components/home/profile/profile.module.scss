@@ -1,0 +1,8 @@
+@import '../../../style/fonts.scss';
+
+.section {
+  @include font-base();
+
+  display: flex;
+  flex-direction: row;
+}

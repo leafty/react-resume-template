@@ -1,0 +1,16 @@
+@import '../../../style/colors.scss';
+
+.content {
+  // margin-top: 0.5em;
+  padding-bottom: 0.5em;
+  font-weight: bold;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-inline-start: 1.5em;
+  }
+}
