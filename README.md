@@ -1,34 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# React Resume Template
 
-## Getting Started
+📄️ Use this project to create your CV with React
 
-First, run the development server:
+![React Resume Template](./docs/resume.png)
+
+
+## Description
+
+This project can be cloned and edited to create your own resume using React
+components.
+
+> Do I need to know React to use this?
+
+Most probably yes. While editing the template to replace it with your own real
+profile data is simple, getting the result to look exactly how you want will
+probably require a bit of tweaking.
+
+
+## Usage
 
 ```bash
-npm run dev
-# or
+# Install dependencies
+yarn
+# Start the dev server
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You can now open http://localhost:3000 and use the print option from your
+browser to print the resume as a PDF.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Note: enable the "Background graphics" option in the print menu to keep the
+hyperlinks color.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+![React Resume Template](./docs/print-menu.png)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## How to edit your profile data
 
-## Learn More
+Open `src/data/profile.tsx` and start to fill in your profile details.
 
-To learn more about Next.js, take a look at the following resources:
+The expected data types are found in `src/data/profile.types.ts`. Many fields
+are typed as `ReactNode` to allow for custom content, e.g. links or bullet
+point lists. 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Section: `profileBits`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This field controls the miscellanous profile bits found just below the header.
 
-## Deploy on Vercel
+The number of items per row can be changed in
+`src/components/home/home.content.tsx`:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```typescript
+<HomeProfile data={data.profile} rowCount={2} />  // Change rowCount here
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Section: `experience`
+
+This field controls the data shown in the "Experience" section of the resume.
+
+If you do not provide the `end` date of the first entry, it will use "Present"
+as an end date and will be styled with a dotted line.
+
+### Section: `studies`
+
+This field controls the data shown in the "Education" section of the resume.
+
+If you do not provide the `end` date of the first entry, it will use "Present"
+as an end date and will be styled with a dotted line.
+
+### Section: `skills`
+
+This field controls the data shown in the "Skills" section of the resume.
+
+
+## Under the hood
+
+This project is powered by [Next.js](https://nextjs.org),
+[React Bootstrap](https://react-bootstrap.github.io)
+and [Font Awesome](https://fontawesome.com).
+
+
+## Author
+
+[Johann-Michael Thiebaut](https://github.com/leafty)
+
+
+## License
+
+This project is MIT Licensed.

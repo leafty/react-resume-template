@@ -9,7 +9,8 @@
 }
 
 .title {
-  // font-weight: 700;
+  margin-top: 0.5em;
+  padding-bottom: 1.5em;
 
   strong {
     font-weight: 700;
@@ -18,5 +19,14 @@
 
   svg {
     color: $color-black;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-inline-start: 1.5em;
   }
 }

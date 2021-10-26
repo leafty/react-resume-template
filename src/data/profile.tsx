@@ -11,12 +11,17 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
+// Your profile data
 export const profile: Profile = {
+  // Your first name
   firstName: 'First',
+  // Your last name
   lastName: 'Last',
 
+  // Your desired job title, will appear as the CV's header
   jobTitle: 'Job Title',
 
+  // Data for the profile bits just below the CV's header
   profileBits: [
     {
       icon: <FontAwesomeIcon icon={faAddressCard} />,
@@ -58,9 +63,10 @@ export const profile: Profile = {
     },
   ],
 
+  // Data for the "Experience" section
   experience: [
     {
-      start: DateTime.fromISO('2020-06-01T00:00:00Z'),
+      start: DateTime.fromObject({ year: 2020, month: 6 }),
       company: (
         <Link href="https://www.linkedin.com/company/example/">Company 5</Link>
       ),
@@ -84,8 +90,8 @@ export const profile: Profile = {
       ),
     },
     {
-      start: DateTime.fromISO('2019-01-01T00:00:00Z'),
-      end: DateTime.fromISO('2020-05-30T00:00:00Z'),
+      start: DateTime.fromObject({ year: 2019, month: 1 }),
+      end: DateTime.fromObject({ year: 2020, month: 5 }),
       company: (
         <Link href="https://www.linkedin.com/company/example/">Company 4</Link>
       ),
@@ -109,8 +115,8 @@ export const profile: Profile = {
       ),
     },
     {
-      start: DateTime.fromISO('2017-03-01T00:00:00Z'),
-      end: DateTime.fromISO('2018-11-30T00:00:00Z'),
+      start: DateTime.fromObject({ year: 2017, month: 3 }),
+      end: DateTime.fromObject({ year: 2018, month: 11 }),
       company: (
         <Link href="https://www.linkedin.com/company/example/">Company 3</Link>
       ),
@@ -131,8 +137,8 @@ export const profile: Profile = {
       ),
     },
     {
-      start: DateTime.fromISO('2015-10-01T00:00:00Z'),
-      end: DateTime.fromISO('2017-02-28T00:00:00Z'),
+      start: DateTime.fromObject({ year: 2015, month: 10 }),
+      end: DateTime.fromObject({ year: 2017, month: 2 }),
       company: (
         <Link href="https://www.linkedin.com/company/example/">Company 2</Link>
       ),
@@ -152,8 +158,8 @@ export const profile: Profile = {
       ),
     },
     {
-      start: DateTime.fromISO('2015-02-01T00:00:00Z'),
-      end: DateTime.fromISO('2015-08-31T00:00:00Z'),
+      start: DateTime.fromObject({ year: 2015, month: 2 }),
+      end: DateTime.fromObject({ year: 2015, month: 8 }),
       company: (
         <Link href="https://www.linkedin.com/company/example/">Company 1</Link>
       ),
@@ -171,30 +177,32 @@ export const profile: Profile = {
     },
   ],
 
+  // Data for the "Education" section
   studies: [
     {
-      start: DateTime.fromISO('2014-09-01T00:00:00Z'),
-      end: DateTime.fromISO('2015-08-31T00:00:00Z'),
+      start: DateTime.fromObject({ year: 2014, month: 9 }),
+      end: DateTime.fromObject({ year: 2015, month: 8 }),
       establishment: 'University Dolor',
       location: 'Location 3',
       title: <strong>Important Diploma</strong>,
     },
     {
-      start: DateTime.fromISO('2012-09-01T00:00:00Z'),
-      end: DateTime.fromISO('2014-06-30T00:00:00Z'),
+      start: DateTime.fromObject({ year: 2012, month: 9 }),
+      end: DateTime.fromObject({ year: 2014, month: 6 }),
       establishment: 'Institude Ipsum',
       location: 'Location 2',
       title: <>Quis blandit turpis cursus in hac</>,
     },
     {
-      start: DateTime.fromISO('2009-09-01T00:00:00Z'),
-      end: DateTime.fromISO('2012-08-31T00:00:00Z'),
+      start: DateTime.fromObject({ year: 2009, month: 9 }),
+      end: DateTime.fromObject({ year: 2012, month: 8 }),
       establishment: 'University Lorem',
       location: 'Location 1',
       title: <>Turpis in eu mi bibendum</>,
     },
   ],
 
+  // Data for the "Skills" section
   skills: [
     {
       title: 'Category 1',

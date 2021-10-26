@@ -9,6 +9,8 @@ import React, {
 } from 'react';
 import styles from './item.module.scss';
 
+const DATE_FORMAT: string = 'LL.yyyy';
+
 export interface TimeSectionListItemProps<As extends ElementType = ElementType>
   extends ComponentPropsWithRef<'li'> {
   as?: As;
@@ -20,8 +22,8 @@ export interface TimeSectionListItemProps<As extends ElementType = ElementType>
 export const TimeSectionListItem: FunctionComponent<TimeSectionListItemProps> =
   ({ as, reverse, start, end, children, className, ...rest }) => {
     const Root = as || 'li';
-    const startText = start?.toFormat('LL.yyyy') || 'Present';
-    const endText = end?.toFormat('LL.yyyy') || 'Present';
+    const startText = start?.toFormat(DATE_FORMAT) || 'Present';
+    const endText = end?.toFormat(DATE_FORMAT) || 'Present';
 
     return (
       <Root className={cx(className, styles.item)} {...rest}>
