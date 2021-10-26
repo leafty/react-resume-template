@@ -86,4 +86,5 @@ and [Font Awesome](https://fontawesome.com).
 
 ## License
 
-This project is MIT Licensed.
+This project is
+[MIT Licensed](https://github.com/leafty/react-resume-template/blob/main/LICENSE).
